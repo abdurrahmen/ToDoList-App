@@ -1,0 +1,13 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'poppins';
+}
+.dark {
+  background-color: #121212;
+  height: 100vh;
+  color: #eee;
+}
