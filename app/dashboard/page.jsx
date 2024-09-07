@@ -2,7 +2,7 @@ import Dashboard from '@components/Dashboard'
 import { Main } from '@components/Main'
 
 export const metadata = {
-  title: 'To Do List • Dashboard',
+  title: 'Intajivity • Dashboard',
   description: 'Do some work bitch!'
 }
 

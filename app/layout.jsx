@@ -4,7 +4,7 @@ import '@styles/globals.css';
 import Link from 'next/link';
 
 export const metadata = {
-    title: "todolist",
+    title: "Intajivity",
     description: "make your life better"
 }
 
