@@ -4,20 +4,21 @@ export default function Dashboard() {
 
   return (
     <div className='h-full w-full'>
-      <div className='flex justify-between'>
+      <div className='flex justify-between flex-col sm:flex-row'>
         <Calendar />
-        <div>Account Center
-
+        <div>
+          Account Center
         </div>
       </div>
-      <div className='flex justify-between'>
-        <div>Sharts
-
+      <div className='flex justify-between flex-col sm:flex-row'>
+        <div>
+          Sharts
         </div>
-        <div>Data
-
+        <div>
+          Data
         </div>
       </div>
+      
     </div>
   )
 }
