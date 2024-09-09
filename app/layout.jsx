@@ -19,6 +19,7 @@ export default function RootLayout({children}) {
     </head>
       <body className='dark'>
           <main className='flex flex-col items-center min-h-[100vh]' >
+
               <NavBar />
               {children}
               <Footer />

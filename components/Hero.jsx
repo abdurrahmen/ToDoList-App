@@ -1,6 +1,8 @@
-import Login from "./Login";
+import Link from "next/link"
+import Button from "./Button"
 
 export default function Hero() {
+
   return (
     <>
       <div className='text-center m-2'>
@@ -15,8 +17,11 @@ export default function Hero() {
 
         <p className='text-sm text-[#ffffff99] '>make your day easier and more productive</p>
       </div>
-
-      <Login />
+      <div className='m-2'>
+        <Link href='/login'>
+          <Button text='Start for free' dark />
+        </Link>
+      </div>
     </>
   )
 }

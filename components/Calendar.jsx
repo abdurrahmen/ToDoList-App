@@ -1,6 +1,5 @@
 'use client'
 import React, {useState} from 'react'
-import Button from './Button';
 
 const months = {'January': 'Jan','February': 'Feb','March': 'Mar','April': 'Apr','May': 'May', 'June': 'Jun','July': 'Jul','August': 'Aug','September': 'Sept','October': 'Oct','November': 'Nov','December': 'Dec',
 };
@@ -8,6 +7,7 @@ const monthsArr = Object.keys(months);
 
 const daysList = {'Sunday': 0, 'Monday': 1, 'Tuesday': 2, 'Wednesday': 3, 'Thursday': 4, 'Friday': 5, 'Saturday': 6};
 const daysArr = Object.keys(daysList);
+
 const displayDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 export default function Calendar() {
@@ -25,8 +25,8 @@ export default function Calendar() {
   const daysToDisplay = firstDayOfMonth + numOf_daysInMonth;
   const numOfRows = (Math.floor(daysToDisplay / 7) + (daysToDisplay % 7 ? 1 : 0)) 
 
-  const numericMonth = monthsArr.indexOf(selectedMonth);   
-
+  const numericMonth = monthsArr.indexOf(selectedMonth); 
+  
   function changeSelectedMonth(val) {
     if(val === 1) {
       if(numericMonth === 11) {
