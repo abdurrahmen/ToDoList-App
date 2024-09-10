@@ -96,7 +96,7 @@ export default function Calendar() {
               }
 
               return(
-                <button>
+                <button key={rowIndex + '-' + solidDayIndex}>
                   <div key={solidDayIndex} className={'flex items-center justify-center w-[30px] h-[30px] rounded-full font-bold  ' + (isToday ? ' bg-blue-600 ' : ' bg-[#ffffff12]')} >
                   {numiricDay}
                   </div>
