@@ -1,5 +1,6 @@
 'use client'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import gsap from 'gsap';
 
 const months = {'January': 'Jan','February': 'Feb','March': 'Mar','April': 'Apr','May': 'May', 'June': 'Jun','July': 'Jul','August': 'Aug','September': 'Sept','October': 'Oct','November': 'Nov','December': 'Dec',
 };
@@ -53,7 +54,10 @@ export default function Calendar() {
       setSelectedYear(now.getFullYear());
     }
   }
-  
+
+  useEffect(() => {
+    gsap.fromTo('#animate', {opacity: 0}, {opacity: 1})
+  }, [selectedMonth]);
 
   return (
     <div className='flex flex-col overflow-hidden border-2 rounded-lg px-3 py-3 m-2'>
@@ -76,7 +80,7 @@ export default function Calendar() {
       </div>
       {[...Array(numOfRows).keys()].map((_, rowIndex) => {
         return(
-          <div key={rowIndex} className='grid grid-cols-7 gap-2 mb-2'>
+          <div key={rowIndex} className='grid grid-cols-7 gap-2 mb-2 animate-fade' id='animate'>
             {daysArr.map((_, solidDayIndex) => {
 
               let numiricDay = (rowIndex * 7) + solidDayIndex - (firstDayOfMonth - 1);
