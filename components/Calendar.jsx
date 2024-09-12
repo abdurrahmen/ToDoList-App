@@ -56,7 +56,7 @@ export default function Calendar() {
   }
 
   useEffect(() => {
-    gsap.fromTo('#animate', {opacity: 0}, {opacity: 1})
+    gsap.fromTo('#animate-fade', {opacity: 0}, {opacity: 1})
   }, [selectedMonth]);
 
   return (
@@ -70,7 +70,7 @@ export default function Calendar() {
             <button onClick={() => changeSelectedMonth(1)} className='bg-blue-600 px-2 rounded-lg m-1'>n</button>
           </div>
         </div>
-        <div className='grid grid-cols-7 gap-2 text-sm'>
+        <div className='grid grid-cols-7 gap-2 text-sm w-full'>
           {...displayDays.map((day, dayindex) => {
             return (
               <p className='pl-1' key={dayindex}>{day}</p>
@@ -80,7 +80,7 @@ export default function Calendar() {
       </div>
       {[...Array(numOfRows).keys()].map((_, rowIndex) => {
         return(
-          <div key={rowIndex} className='grid grid-cols-7 gap-2 mb-2 animate-fade' id='animate'>
+          <div key={rowIndex} className='grid grid-cols-7 gap-2 mb-2' id='animate-fade'>
             {daysArr.map((_, solidDayIndex) => {
 
               let numiricDay = (rowIndex * 7) + solidDayIndex - (firstDayOfMonth - 1);

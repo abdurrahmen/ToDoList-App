@@ -4,7 +4,7 @@ import Button from "./Button"
 export default function Hero() {
 
   return (
-    <>
+    <section className='flex flex-col items-center'>
       <div className='text-center m-2'>
         
         <p className='text-3xl sm:text-6xl my-2'>Your Days are 
@@ -22,6 +22,6 @@ export default function Hero() {
           <Button text='Start for free' dark />
         </Link>
       </div>
-    </>
+    </section>
   )
 }
