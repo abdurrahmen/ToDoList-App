@@ -60,27 +60,27 @@ export default function Calendar() {
   }, [selectedMonth]);
 
   return (
-    <div className='flex flex-col overflow-hidden border-2 rounded-lg px-3 py-3 m-2'>
+    <div className='flex flex-col overflow-hidden border-2 rounded-lg p-1 sm:p-3'>
       <div className='flex items-center justify-between mb-2 flex-col ' >
         <div className='flex items-center justify-between w-full '>
-        <p>{selectedMonth} <span className='text-blue-600 font-semibold text-sm'>{selectedYear}</span></p>
+        <p className='text-sm sm:text-md'>{selectedMonth} <span className='text-blue-600 font-semibold text-xs sm:text-sm'>{selectedYear}</span></p>
           <div>
-            <button onClick={() => changeSelectedMonth(-1)} className='bg-blue-600 px-2 rounded-lg m-1'>p</button>
-            <button onClick={() => changeSelectedMonth(0)} className='bg-blue-600 px-2 rounded-lg m-1'>b</button>
-            <button onClick={() => changeSelectedMonth(1)} className='bg-blue-600 px-2 rounded-lg m-1'>n</button>
+            <button onClick={() => changeSelectedMonth(-1)} className='bg-blue-600 px-1 sm:px-2 rounded-lg m-1'>p</button>
+            <button onClick={() => changeSelectedMonth(0)} className='bg-blue-600 px-1 sm:px-2 rounded-lg m-1'>b</button>
+            <button onClick={() => changeSelectedMonth(1)} className='bg-blue-600 px-1 sm:px-2 rounded-lg m-1'>n</button>
           </div>
         </div>
-        <div className='grid grid-cols-7 gap-2 text-sm w-full'>
+        <div className='grid grid-cols-7 gap:1 sm:gap-2 w-full'>
           {...displayDays.map((day, dayindex) => {
             return (
-              <p className='pl-1' key={dayindex}>{day}</p>
+              <p className='pl-1 w-fit text-[10px] sm:text-sm ' key={dayindex}>{day}</p>
             )
           })}
         </div>
       </div>
       {[...Array(numOfRows).keys()].map((_, rowIndex) => {
         return(
-          <div key={rowIndex} className='grid grid-cols-7 gap-2 mb-2' id='animate-fade'>
+          <div key={rowIndex} className='grid grid-cols-7 gap-1 sm:gap-2 mb-1 sm:mb-2 w-full' id='animate-fade'>
             {daysArr.map((_, solidDayIndex) => {
 
               let numiricDay = (rowIndex * 7) + solidDayIndex - (firstDayOfMonth - 1);
@@ -96,10 +96,8 @@ export default function Calendar() {
               }
 
               return(
-                <button key={rowIndex + '-' + solidDayIndex}>
-                  <div key={solidDayIndex} className={'flex items-center justify-center w-[30px] h-[30px] rounded-full font-bold  ' + (isToday ? ' bg-blue-600 ' : ' bg-[#ffffff12]')} >
+                <button className={'flex items-center justify-center h-5 w-5 sm:w-[30px] sm:h-[30px] text-xs sm:text-base rounded-full font-medium sm:font-bold active:scale-90 duration-200 ' + (isToday ? ' bg-blue-600 ' : 'bg-[#ffffff12]')} key={solidDayIndex}>
                   {numiricDay}
-                  </div>
                 </button>
               )
             })}
