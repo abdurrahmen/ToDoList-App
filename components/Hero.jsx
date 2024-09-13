@@ -7,12 +7,13 @@ export default function Hero() {
     <section className='flex flex-col items-center'>
       <div className='text-center m-2'>
         
-        <p className='text-3xl sm:text-6xl my-2'>Your Days are 
+        <p className='text-[8vw] font-semibold text-nowrap sm:text-6xl my-2'>Your Days are 
           <span className='font-extrabold text-blue-600'> messy?</span>
         </p>
 
-        <p className='text-xl sm:text-3xl my-2'>maybe all what you <span className='font-extrabold text-blue-600'>need</span> is a
-        <span className='font-extrabold text-blue-600'> To do list.</span>
+        <p className='text-xl font-semibold sm:text-3xl my-2'>Trust me 
+          <span className='font-extrabold text-blue-600'> Intajivity </span> 
+          will save you
         </p>
 
         <p className='text-sm text-[#ffffff99] '>make your day easier and more productive</p>
