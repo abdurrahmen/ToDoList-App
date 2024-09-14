@@ -3,6 +3,8 @@ import Button from "./Button"
 
 export default function Hero() {
 
+  const arrowIcon = <i class="fa-solid fa-arrow-right"></i>;
+
   return (
     <section className='flex flex-col items-center'>
       <div className='text-center m-2'>
@@ -20,7 +22,7 @@ export default function Hero() {
       </div>
       <div className='m-2'>
         <Link href='/login'>
-          <Button text='Start for free' dark />
+          <Button text='Start for free' icon={arrowIcon} dark />
         </Link>
       </div>
     </section>
