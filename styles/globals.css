@@ -7,15 +7,23 @@
 
 * {
   font-family: 'poppins';
+  box-sizing: border-box;
 }
 .dark {
   background-color: #121212;
   height: 100vh;
   color: #eee;
 }
+button::before {
+  content: "";
+}
 .animate-fade {
   animation: fade .5s  ease-in-out;
   animation-fill-mode: backwards;
+}
+.moveChild:hover .moveMe {
+  transform: translateX(4px);
+
 }
 @keyframes fade {
   0%{

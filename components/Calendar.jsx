@@ -64,10 +64,10 @@ export default function Calendar() {
       <div className='flex items-center justify-between mb-2 flex-col ' >
         <div className='flex items-center justify-between w-full '>
         <p className='text-sm sm:text-md'>{selectedMonth} <span className='text-blue-600 font-semibold text-xs sm:text-sm'>{selectedYear}</span></p>
-          <div>
-            <button onClick={() => changeSelectedMonth(-1)} className='bg-blue-600 px-1 sm:px-2 rounded-lg m-1'><i class="fa-solid fa-chevron-left"></i></button>
-            <button onClick={() => changeSelectedMonth(0)} className='bg-blue-600 px-1 sm:px-2 rounded-lg m-1'><i class="fa-solid fa-rotate-left"></i></button>
-            <button onClick={() => changeSelectedMonth(1)} className='bg-blue-600 px-1 sm:px-2 rounded-lg m-1'><i class="fa-solid fa-chevron-right"></i></button>
+          <div className='flex gap-2'>
+            <button onClick={() => changeSelectedMonth(-1)} className='active:scale-95 duration-200 m-1'><i class="fa-solid fa-chevron-left"></i></button>
+            <button onClick={() => changeSelectedMonth(0)} className='active:scale-95 duration-200 m-1'><i class="fa-solid fa-rotate-left"></i></button>
+            <button onClick={() => changeSelectedMonth(1)} className='active:scale-95 duration-200 m-1'><i class="fa-solid fa-chevron-right"></i></button>
           </div>
         </div>
         <div className='grid grid-cols-7 gap:1 sm:gap-2 w-full'>
@@ -85,7 +85,7 @@ export default function Calendar() {
 
               let numiricDay = (rowIndex * 7) + solidDayIndex - (firstDayOfMonth - 1);
               
-              const isToday = (numiricDay === now.getDate() && selectedMonth === monthsArr[now.getMonth()]);
+              const isToday = (numiricDay === now.getDate() && selectedMonth === monthsArr[now.getMonth()] && selectedYear === now.getFullYear());
 
               const DontDisplay = numiricDay > numOf_daysInMonth || numiricDay < 1;
               
