@@ -6,7 +6,7 @@ export default function Hero() {
   const arrowIcon = <i class="fa-solid fa-arrow-right"></i>;
 
   return (
-    <section className='flex flex-col items-center'>
+    <section className='flex flex-col items-center main-bg'>
       <div className='text-center m-2'>
         
         <p className='text-[8vw] font-semibold text-nowrap sm:text-6xl my-2'>Your Days are 

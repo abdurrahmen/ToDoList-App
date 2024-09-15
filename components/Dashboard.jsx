@@ -5,7 +5,7 @@ export default function Dashboard() {
 
   return (
     <div className='w-full h-full'>
-      <div className='flex  mb-2 gap-2 '>
+      <div className='flex mb-2 gap-2 '>
         <div>
           <Calendar />
         </div>

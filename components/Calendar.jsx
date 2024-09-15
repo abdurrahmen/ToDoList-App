@@ -60,20 +60,21 @@ export default function Calendar() {
   }, [selectedMonth]);
 
   return (
-    <div className='flex flex-col overflow-hidden border-2 rounded-lg p-1 sm:px-3 sm:py-2'>
+    <div className='flex flex-col overflow-hidden border-2 rounded-lg p-2 sm:px-3 sm:py-2'>
       <div className='flex items-center justify-between mb-2 flex-col ' >
         <div className='flex items-center justify-between w-full '>
-        <p className='text-sm sm:text-md'>{selectedMonth} <span className='text-blue-600 font-semibold text-xs sm:text-sm'>{selectedYear}</span></p>
+        <p className='text-xs sm:text-md'>{selectedMonth} 
+          <span className='text-blue-600 font-semibold text-xs sm:text-sm'> {selectedYear}</span></p>
           <div className='flex gap-2'>
-            <button onClick={() => changeSelectedMonth(-1)} className='active:scale-95 duration-200 m-1'><i class="fa-solid fa-chevron-left"></i></button>
-            <button onClick={() => changeSelectedMonth(0)} className='active:scale-95 duration-200 m-1'><i class="fa-solid fa-rotate-left"></i></button>
-            <button onClick={() => changeSelectedMonth(1)} className='active:scale-95 duration-200 m-1'><i class="fa-solid fa-chevron-right"></i></button>
+            <button onClick={() => changeSelectedMonth(-1)} className='active:scale-95 text-xs sm:text-base duration-200 ml-1'><i class="fa-solid fa-chevron-left"></i></button>
+            <button onClick={() => changeSelectedMonth(0)} className='active:scale-95 text-xs sm:text-base duration-200 ml-1'><i class="fa-solid fa-rotate-left"></i></button>
+            <button onClick={() => changeSelectedMonth(1)} className='active:scale-95 text-xs sm:text-base duration-200 ml-1'><i class="fa-solid fa-chevron-right"></i></button>
           </div>
         </div>
         <div className='grid grid-cols-7 gap:1 sm:gap-2 w-full'>
           {...displayDays.map((day, dayindex) => {
             return (
-              <p className='pl-1 w-fit text-[10px] sm:text-sm ' key={dayindex}>{day}</p>
+              <p className='pl-[2px] w-fit text-[10px] sm:text-sm ' key={dayindex}>{day}</p>
             )
           })}
         </div>
