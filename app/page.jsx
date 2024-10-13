@@ -1,4 +1,4 @@
-import CallToAction from "@components/calltoaction";
+import CallToAction from "@components/CallToAction";
 import Hero from "@components/Hero";
 import Hero_section from "@components/Hero_section";
 import { Main } from "@components/Main";
