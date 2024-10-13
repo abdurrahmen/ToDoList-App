@@ -1,3 +1,4 @@
+import CallToAction from "@components/calltoaction";
 import Hero from "@components/Hero";
 import Hero_section from "@components/Hero_section";
 import { Main } from "@components/Main";
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero_section {...section_one} />
       <Hero_section {...section_one} />
       <Hero_section {...section_one} />
+      <CallToAction />
     </Main>
   )
 }
