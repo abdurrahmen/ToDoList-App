@@ -1,4 +1,4 @@
-# productivity App
+# Productivity App
 
 so I create This project to understand more about react and nextjs
 and some tools like (git, nextJs, tailwindCss ...etc)
